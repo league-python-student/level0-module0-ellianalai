@@ -12,15 +12,19 @@ if __name__ == '__main__':
     window.bgcolor('white')
     
     # Make a new turtle
-    
+    ellie=turtle.Turtle()
     # This code sets our shape to a turtle
-    
+    ellie.shape('turtle')
     # Set your turtle's speed (0=fastest, 1=slowest, 10=faster)
-    
+    ellie.speed(5)
     # Set your turtle's color using .color('green')
-    
+    ellie.color('green')
     # Use a loop to repeat a the code below 50 times
-        
+    for i in range (50):
+        ellie.pencolor(getRandomColor())
+        ellie.forward(5*i)
+        ellie.right(360/7)
+        ellie.width(i)
         # Set the turtle color to a random color
 
         # Move the turtle (5*i) pixels. 'i' is the loop variable

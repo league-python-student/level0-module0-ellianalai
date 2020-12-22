@@ -19,15 +19,26 @@ if __name__ == '__main__':
     flameSize = 130;        # the length of the flaming arms
     
     # Make a new turtle
-    
+    ellie=turtle.Turtle()
     # Make the turtle shape 'turtle', .shape('turtle')
-    
+    ellie.shape('turtle')
     # Set the turtle width to 2
-    
+    ellie.width(2)
     # Set the turtle speed to 0 (fastest)
-    
+    ellie.speed(0)
     # Use a for loop to repeat all of the code below ONE time (we will change this later)
-        
+    for i in range(25):
+        ellie.fillcolor('orange')
+        ellie.begin_fill()
+        ellie.right(45)
+        ellie.forward(64)
+        ellie.left(40)
+        ellie.forward (flameSize)
+        ellie.right(170)
+        ellie.forward(flameSize)
+        ellie.right(62)
+        ellie.forward(baseSize)
+        ellie.end_fill()
         # Set the turtle .fillcolor() to orange
         
         # Call the turtle .begin_fill() function
