@@ -10,17 +10,17 @@ if __name__ == '__main__':
     random_num = random.randint(1, 10)
 
     # 2. Print out the random variable above
-    print(random_num)
+
     # 3. Code a for loop to run steps 4-10, 10 times
     for i in range (10):
-        guess = simpledialog.askstring(title = 'Guessing Game', prompt = 'Guess a number from 1-10')
+        guess = simpledialog.askinteger(title = 'Guessing Game', prompt = 'Guess a number from 1-10')
         if guess == random_num:
             messagebox.showinfo(title = '', message= 'You are Correct :D')
             sys.exit(0)
-        elif guess > 5:
+        elif guess > random_num:
             messagebox.showinfo(title = '', message = 'You are too high')
-        elif guess < 5:
-            messagebox.showinfo(title = '', message = 'You are to low')
+        elif guess < random_num:
+            messagebox.showinfo(title = '', message = 'You are too low')
     messagebox.showinfo(title = 'Guessing Game', message = 'You have lost')
     # 4. Ask the user for a guess using a pop-up window, and save their response
 
